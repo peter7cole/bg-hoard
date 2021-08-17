@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-
 import styles from './app.module.scss';
 
 import { Header } from '@bg-hoard/store/ui-shared';
+import { Game } from '@bg-hoard/util-interface';
 
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -13,12 +13,11 @@ import Typography from '@material-ui/core/Typography';
 import { formatRating } from '@bg-hoard/store/util-formatters';
 
 import { Route, Link } from 'react-router-dom';
-
 import { StoreFeatureGameDetail } from '@bg-hoard/store/feature-game-detail';
 
 export const App = () => {
   const [state, setState] = useState<{
-    data: any[];
+    data: Game[];
     loadingState: 'success' | 'error' | 'loading';
   }>({
     data: [],
@@ -55,8 +54,8 @@ export const App = () => {
           {state.loadingState === 'loading'
             ? 'Loading...'
             : state.loadingState === 'error'
-            ? '<div>Error retrieving data</div>'
-            : state.data.map((x) => (
+              ? '<div>Error retrieving data</div>'
+              : state.data.map((x) => (
                 <Link to={`/game/${x.id}`} key={x.id}>
                   <Card className={styles['game-card']}>
                     <CardActionArea>
