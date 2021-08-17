@@ -6,6 +6,8 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
+import { formatRating } from '@bg-hoard/store/util-formatters';
+// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import { Header } from '@bg-hoard/store/ui-shared';
 import Typography from '@material-ui/core/Typography';
 
@@ -36,7 +38,7 @@ export const App = () => {
                   component="p"
                   className={styles['game-rating']}
                 >
-                  <strong>Rating:</strong> {x.rating}
+                  <strong>Rating:</strong> {formatRating(x.rating)}
                 </Typography>
               </CardContent>
             </CardActionArea>
