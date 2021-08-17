@@ -5,9 +5,7 @@ import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import { formatRating } from '@bg-hoard/store/util-formatters';
-// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import { Header } from '@bg-hoard/store/ui-shared';
 import Typography from '@material-ui/core/Typography';
 
