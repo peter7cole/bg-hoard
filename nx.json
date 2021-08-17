@@ -55,6 +55,9 @@
     },
     "store-util-formatters": {
       "tags": []
+    },
+    "util-interface": {
+      "tags": []
     }
   }
 }
