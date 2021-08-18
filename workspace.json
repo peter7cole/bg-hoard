@@ -1,5 +1,25 @@
 {
   "version": 2,
+  "cli": {
+    "defaultCollection": "@nrwl/react"
+  },
+  "defaultProject": "store",
+  "generators": {
+    "@nrwl/react": {
+      "application": {
+        "style": "scss",
+        "linter": "eslint",
+        "babel": true
+      },
+      "component": {
+        "style": "scss"
+      },
+      "library": {
+        "style": "scss",
+        "linter": "eslint"
+      }
+    }
+  },
   "projects": {
     "api": {
       "root": "apps/api",
@@ -88,8 +108,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
                 }
               ]
             }
@@ -99,13 +119,11 @@
           "executor": "@nrwl/web:dev-server",
           "options": {
             "buildTarget": "store:build",
-            "hmr": true,
             "proxyConfig": "apps/store/proxy.conf.json"
           },
           "configurations": {
             "production": {
-              "buildTarget": "store:build:production",
-              "hmr": false
+              "buildTarget": "store:build:production"
             }
           }
         },
@@ -260,9 +278,7 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "libs/store/util-formatters/**/*.{ts,tsx,js,jsx}"
-            ]
+            "lintFilePatterns": ["libs/store/util-formatters/**/*.ts"]
           }
         },
         "test": {
@@ -296,25 +312,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "defaultCollection": "@nrwl/react"
-  },
-  "generators": {
-    "@nrwl/react": {
-      "application": {
-        "style": "scss",
-        "linter": "eslint",
-        "babel": true
-      },
-      "component": {
-        "style": "scss"
-      },
-      "library": {
-        "style": "scss",
-        "linter": "eslint"
-      }
-    }
-  },
-  "defaultProject": "store"
+  }
 }
