@@ -48,7 +48,7 @@ export const StoreFeatureGameDetail = (props: StoreFeatureGameDetailProps) => {
           loadingState: 'error',
         });
       });
-  }, [props.match.params.id]);
+  }, [props.match.params.id, state]);
 
   return (
     <div className={styles['container']}>
