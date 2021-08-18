@@ -107,4 +107,4 @@ Each lab will contain a link to the next one. Start from **"Lab 1"** and move th
 | 🪁&nbsp;&nbsp;[Lab 21 - Setting up CD for automatic deployment](docs/lab21-alt/LAB.md) | 🎈&nbsp;&nbsp;[Lab 21 - Setting up CD for automatic deployment](docs/lab21/LAB.md) |
 | 💈&nbsp;&nbsp;[Lab 22 - Deploying only what changed](docs/lab22/LAB.md)                | 💈&nbsp;&nbsp;[Lab 22 - Deploying only what changed](docs/lab22/LAB.md)            |
 
-## Have fun learning! 🎉
+## Have fun learning! 🎉🎉
