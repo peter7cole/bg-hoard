@@ -1,7 +1,7 @@
 describe('store-ui-shared: Header component', () => {
-  beforeEach(() => cy.visit('/iframe.html?id=header--primary&args=title:BoardGameHoard'));
+  beforeEach(() => cy.visit('/iframe.html?id=header--primary'));
 
   it('should show the title', () => {
-    cy.get('header').contains('BoardGameHoard');
+    cy.get('h6').contains('Board Game Hoard');
   });
 });

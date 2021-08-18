@@ -1,5 +1,6 @@
 {
   "implicitDependencies": {
+    ".github/workflows/ci.yml": "*",
     "package.json": {
       "dependencies": "*",
       "devDependencies": "*"
@@ -27,6 +28,9 @@
   "projects": {
     "api": {
       "tags": ["scope:api", "type:app"]
+    },
+    "api-util-notifications": {
+      "tags": ["type:util", "scope:api"]
     },
     "store": {
       "tags": ["scope:store", "type:app"]
