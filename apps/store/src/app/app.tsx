@@ -25,6 +25,8 @@ export const App = () => {
     loadingState: 'success',
   });
 
+  console.log("...") 
+
   useEffect(() => {
     setState((state) => ({
       ...state,
