@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import styles from './store-feature-game-detail.module.scss';
 
@@ -48,7 +48,7 @@ export const StoreFeatureGameDetail = (props: StoreFeatureGameDetailProps) => {
           loadingState: 'error',
         });
       });
-  }, [props.match.params.id, state]);
+  }, [props.match.params.id]);
 
   return (
     <div className={styles['container']}>
